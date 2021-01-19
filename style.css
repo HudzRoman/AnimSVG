@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 10rem;
+    text-align: center;
+    background-color: rgb(223, 200, 238, 0.4);
+}
+#right-wheel,
+#left-wheel{
+    animation: wheel 1.5s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+
+}
+#man-bike{
+    animation: bike 0.5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+#shadow{
+    animation: shad 1s ease-in-out infinite alternate-reverse;
+}
+
+#girl{
+    animation: gir 8s infinite linear;
+    transform-origin: bottom;
+}
+
+
+
+@keyframes wheel{
+    form{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes bike{
+    form{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(10deg);
+    }
+}
+
+@keyframes shad{
+    form{
+        transform: rotateY(0deg);
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateY(10deg);
+        transform: rotateX(10deg);
+    }
+}
+@keyframes gir{
+    0% {
+        transform: translate(800,100);
+      }
+      100% {
+        transform: translate(-800px, -100px);
+      }
+}
